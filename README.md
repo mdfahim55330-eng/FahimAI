@@ -1,27 +1,30 @@
-# FahimAI 💙
+# FahimAI v2.0 💙
 
-A romantic, warm AI companion with a neon holographic-inspired interface, chat, and browser voice input.
+Bilingual (Bangla + English) romantic AI companion with a blue holographic-inspired interface.
 
-## Requirements
-- Node.js 18+
-- An OpenAI API key
+## Included
+- Responsive dark-blue interface and animated holographic orb.
+- Cute, warm, respectful, gently romantic assistant personality.
+- Bangla / English interface selector.
+- AI chat through a server-side OpenAI-compatible Chat Completions request.
+- Browser speech recognition for voice input (Chrome/Edge support varies).
+- Browser text-to-speech replies. Available voice, accent and gender depend on voices installed by the browser/OS; a specific cute female voice is not guaranteed.
+- Session-only conversation context and locally saved language preference.
+- Memory and Skills information panels.
 
 ## Run locally
-1. Copy `.env.example` to `.env`.
-2. Set `OPENAI_API_KEY` in `.env`. Never put the key in frontend JavaScript or commit it.
-3. Run `npm install`.
-4. Run `npm start`.
-5. Open http://localhost:3000
+1. Use Node.js 20 or newer.
+2. Copy `.env.example` to `.env`.
+3. Set `OPENAI_API_KEY` in `.env`. Never commit this secret.
+4. Run `npm install` then `npm start`.
+5. Open http://localhost:3000.
 
-## Deploy
-Deploy as a Node web service. Build/install command: `npm install`; start command: `npm start`. Add `OPENAI_API_KEY` and optionally `OPENAI_MODEL` as private environment variables in the hosting dashboard.
+## Render
+Build command: `npm install`
+Start command: `npm start`
+Set `OPENAI_API_KEY` in Render's Environment settings. Optionally set `OPENAI_MODEL`; default is `gpt-4o-mini`.
 
-## Current features
-- Responsive dark neon interface and animated holographic-style orb
-- Bangla-friendly romantic companion personality
-- AI chat through a server-side API route
-- Browser speech-to-text where supported
-- Quick conversation prompts and reset chat
+## Limitations
+The avatar is a CSS animated holographic orb, not a photorealistic 3D human. Voice is provided by the browser/OS and is not a custom voice clone. Conversation memory is not persistent across sessions or devices. External apps, unrestricted web browsing, email, payments, local files and computer control are not enabled. Those capabilities need separate integrations, scoped permissions and confirmation for consequential actions.
 
-## Important limitations
-This starter does not have unrestricted control of your computer, accounts, or the internet. Skills such as email, calendar, file operations, web browsing, and app control need separate integrations, explicit permissions, and safety confirmations. Voice output and a fully rendered 3D character can be added as subsequent modules. Chat history currently lives in the browser session and is not a cloud-synced long-term memory.
+Keep all API keys server-side. Do not put secrets in frontend JavaScript or GitHub.
